@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>chatroom</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>servlet.MessageServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <servlet-class>servettest.UploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListFileServlet</servlet-name>
+    <servlet-class>servettest.ListFileServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <servlet-class>servettest.DownLoadServlet</servlet-class>
+  </servlet>
+  	<filter>
+	<filter-name>CharacterEncodingFilter</filter-name>
+	<filter-class>filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>CharacterEncodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+</web-app>
